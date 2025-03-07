@@ -25,8 +25,8 @@ Think about which debugging methods you found most useful and how you might appl
 // This program is intended to display a simple prompt in the console but fails to run.
 
 console.log("Welcome to the bootcamp
-
 // What’s Wrong?
+//syntax error. add parenthesis and quote at end and code will run as such: console.log("welcome to the bootcamp");
 
 
 // Program B
@@ -40,7 +40,12 @@ for (let i = 0; i < numbers.length; i++) {
 }
 
 // What’s Wrong?
-
+//NAN error. runtime error. "eight" changed to 8 makes it run. thus: let numbers = [2, 4, 8];
+/*for (let i = 0; i < numbers.length; i++) {
+  let doubled = numbers[i] * 2;
+  console.log(doubled);
+}
+*/
 
 
 // Program C (Logic Error)
@@ -60,3 +65,13 @@ function isPrime(num) {
 console.log(isPrime(7)); // Expected true but gets false
 
 // What’s Wrong?
+//true and false need to be swapped thusly: 
+/*function isPrime(num) {
+  if (num < 2) return false;
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return false;  // Supposed to indicate num is NOT prime
+    }
+  }
+  return true; // Supposed to indicate num IS prime
+}*/
